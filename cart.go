@@ -20,11 +20,11 @@ type ICartService interface {
 
 type CartService struct {
 	logger     logging.Interface
-	repo       repo.ICartrepo
-	repoRacket repo.IRacketrepo
+	repo       repo.ICartRepository
+	repoRacket repo.IRacketRepository
 }
 
-func NewCartService(logger logging.Interface, repo repo.ICartrepo, repoRacket repo.IRacketrepo) *CartService {
+func NewCartService(logger logging.Interface, repo repo.ICartRepository, repoRacket repo.IRacketRepository) *CartService {
 	return &CartService{
 		logger:     logger,
 		repo:       repo,

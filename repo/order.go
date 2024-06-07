@@ -7,7 +7,7 @@ import (
 )
 
 //go:generate mockery --name=IOrderrepo
-type IOrderrepo interface {
+type IOrderRepository interface {
 	Create(ctx context.Context, order *model.Order) error
 	Update(ctx context.Context, order *model.Order) error
 	Remove(ctx context.Context, orderID int) error

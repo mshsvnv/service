@@ -2,12 +2,13 @@ package repo
 
 import (
 	"context"
+
 	"github.com/mshsvnv/service/dto"
 	"github.com/mshsvnv/service/model"
 )
 
 //go:generate mockery --name=IFeedbackrepo
-type IFeedbackrepo interface {
+type IFeedbackRepository interface {
 	Create(ctx context.Context, feedback *model.Feedback) error
 	Update(ctx context.Context, feedback *model.Feedback) error
 	Remove(ctx context.Context, req *dto.RemoveFeedbackReq) error

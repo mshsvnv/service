@@ -23,12 +23,12 @@ type IOrderService interface {
 
 type OrderService struct {
 	logger     logging.Interface
-	repo       repo.IOrderrepo
-	repoCart   repo.ICartrepo
-	repoRacket repo.IRacketrepo
+	repo       repo.IOrderRepository
+	repoCart   repo.ICartRepository
+	repoRacket repo.IRacketRepository
 }
 
-func NewOrderService(logger logging.Interface, repo repo.IOrderrepo, repoCart repo.ICartrepo, repoRacket repo.IRacketrepo) *OrderService {
+func NewOrderService(logger logging.Interface, repo repo.IOrderRepository, repoCart repo.ICartRepository, repoRacket repo.IRacketRepository) *OrderService {
 	return &OrderService{
 		logger:     logger,
 		repo:       repo,

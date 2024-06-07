@@ -22,10 +22,10 @@ type ISupplierService interface {
 
 type SupplierService struct {
 	logger logging.Interface
-	repo   repo.ISupplierrepo
+	repo   repo.ISupplierRepository
 }
 
-func NewSupplierService(logger logging.Interface, repo repo.ISupplierrepo) *SupplierService {
+func NewSupplierService(logger logging.Interface, repo repo.ISupplierRepository) *SupplierService {
 	return &SupplierService{
 		logger: logger,
 		repo:   repo,

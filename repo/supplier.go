@@ -6,8 +6,7 @@ import (
 	"github.com/mshsvnv/service/model"
 )
 
-//go:generate mockery --name=ISupplierrepo
-type ISupplierrepo interface {
+type ISupplierRepository interface {
 	Create(ctx context.Context, supplier *model.Supplier) error
 	Update(ctx context.Context, supplier *model.Supplier) error
 	Remove(ctx context.Context, email string) error

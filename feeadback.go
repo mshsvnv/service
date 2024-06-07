@@ -24,10 +24,10 @@ type IFeedbackService interface {
 
 type FeedbackService struct {
 	logger logging.Interface
-	repo   repo.IFeedbackrepo
+	repo   repo.IFeedbackRepository
 }
 
-func NewFeedbackService(logger logging.Interface, repo repo.IFeedbackrepo) *FeedbackService {
+func NewFeedbackService(logger logging.Interface, repo repo.IFeedbackRepository) *FeedbackService {
 	return &FeedbackService{
 		logger: logger,
 		repo:   repo,

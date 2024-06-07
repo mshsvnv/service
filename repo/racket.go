@@ -7,7 +7,7 @@ import (
 )
 
 //go:generate mockery --name=IRacketrepo
-type IRacketrepo interface {
+type IRacketRepository interface {
 	Create(ctx context.Context, racket *model.Racket) error
 	Update(ctx context.Context, racket *model.Racket) error
 	Remove(ctx context.Context, id int) error

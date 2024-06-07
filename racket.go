@@ -22,11 +22,11 @@ type IRacketService interface {
 
 type RacketService struct {
 	logger       logging.Interface
-	repo         repo.IRacketrepo
-	repoSupplier repo.ISupplierrepo
+	repo         repo.IRacketRepository
+	repoSupplier repo.ISupplierRepository
 }
 
-func NewRacketService(logger logging.Interface, repo repo.IRacketrepo, repoSupplier repo.ISupplierrepo) *RacketService {
+func NewRacketService(logger logging.Interface, repo repo.IRacketRepository, repoSupplier repo.ISupplierRepository) *RacketService {
 	return &RacketService{
 		logger:       logger,
 		repo:         repo,
